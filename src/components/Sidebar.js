@@ -5,8 +5,9 @@ import PowerIcon from '@mui/icons-material/Power';
 import AirplayIcon from '@mui/icons-material/Airplay';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'; // <-- Import the new icon
 import theme from '../theme';
-import { Link } from 'react-router-dom';  // <-- Import the Link component
+import { Link } from 'react-router-dom';  
 import logo from '../img/peak_logo1.png';
 
 function Sidebar() {
@@ -31,7 +32,7 @@ function Sidebar() {
       <Divider />
       
       <List>
-        <ListItem button component={Link} to="/dashboard" key="Dashboard" sx={{ '&:hover': { background: theme.palette.background.default } }}>
+        <ListItem button component={Link} to="/" key="Dashboard" sx={{ '&:hover': { background: theme.palette.background.default } }}>
           <ListItemIcon><DashboardIcon color="secondary" /></ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
@@ -42,6 +43,10 @@ function Sidebar() {
         <ListItem button component={Link} to="/quality-control" key="Quality Control" sx={{ '&:hover': { background: theme.palette.background.default } }}>
           <ListItemIcon><AirplayIcon color="secondary" /></ListItemIcon>
           <ListItemText primary="Quality Control" />
+        </ListItem>
+        <ListItem button component={Link} to="/cost-savings" key="Cost Savings" sx={{ '&:hover': { background: theme.palette.background.default } }}>
+          <ListItemIcon><MonetizationOnIcon color="secondary" /></ListItemIcon>  {/* New icon */}
+          <ListItemText primary="Cost Savings" />
         </ListItem>
       </List>
       
